@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.Python
+.env
+*.env
+*.db
+instance/
+.vscode/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+backend/venv/
+
+# Flask / local config
+config.py
+
+# React / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build files
+build/
+dist/
+*.tgz
+.cache/
+frontend/build/
+
+# macOS
+.DS_Store
+
+# Git
+*.orig
+*.patch
+
+# Others
+*.zip
+*.bak
