@@ -18,9 +18,6 @@
 - ⏰ **Automated Price Monitoring**  
   Prices are automatically scraped every 30 minutes using APScheduler.
 
-- 🧱 **Robust Error Handling**  
-  Gracefully handles invalid URLs, scraping errors, and network failures.
-
 - 📱 **Responsive UI**  
   Built with Tailwind CSS to ensure a smooth experience across all devices.
 
