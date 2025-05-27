@@ -3,6 +3,8 @@ import axios from 'axios';
 import PriceChart from './PriceChart';
 
 function PriceTracker() {
+  const backendUrl = 'https://pricepulse-backend-odjv.onrender.com';
+
   const [url, setUrl] = useState('');
   const [targetPrice, setTargetPrice] = useState('');
   const [email, setEmail] = useState('');
@@ -14,13 +16,13 @@ function PriceTracker() {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5002/api/track', {
+      const response = await axios.post(`${backendUrl}/api/track`, {
         url,
         target_price: targetPrice,
-        email
+        email,
       });
       setProduct(response.data);
-      const pricesResponse = await axios.get(`http://localhost:5002/api/prices/${encodeURIComponent(url)}`);
+      const pricesResponse = await axios.get(`${backendUrl}/api/prices/${encodeURIComponent(url)}`);
       setPrices(pricesResponse.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong');
